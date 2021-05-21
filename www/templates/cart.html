@@ -1,0 +1,46 @@
+<ion-view view-title="CartItems" cache-view="false">
+    <ion-header-bar  class=" bar-balanced" style="height: 32px;" >
+      <ion-icon  class="ion-chevron-left icon1"></ion-icon>&nbsp;&nbsp;  <a href="#/tab/categories"class="button  button-clear backButton">Back</a>
+  
+      <button ng-click="editProduct()"; class="  button-positive cartButton1">Edit</button>
+  
+    </ion-header-bar>
+  
+    <ion-content>
+  
+  
+        <ion-list style="margin-top: 30px !important;" class="cartList">
+          <div class="row box_grid cartBox box_grids ">
+            <div class="col box_grid box_grids col-25" style="color: black bold;"> name</div>
+            <div class="col box_grid box_grids col-25"> qnt</div>
+            <div class="col box_grid box_grids col-25">price</div>
+            <div class="col box_grid box_grids col-25">remove</div>
+  
+          </div>
+          <div class="row box_grid" ng-repeat="item in items track by $index">
+            <div class="col box_grid col-25">{{item.names}} </div>
+            <div class="col box_grid col-25">{{item.qnt}} </div>
+            <div class="col box_grid col-25">{{item.price}}</div>
+            <div style="color: darkred;" class="col box_grid col-25"><i ng-click="removeItem(item.prodId);" class="icon ion-ios-trash"></i></div>
+          </div>
+  
+         <div> 
+           <div class="row box_grid  cartBox cartBox1" >
+            <div class="col box_grid col-25 box_grids">Total </div>
+            <div class="col box_grid col-25">{{quantity}} </div>
+            <div class="col box_grid col-25">{{total}}</div>
+            <div style="color: darkred;" class="col box_grid col-25"><i class="icon ion-ios-trash" ng-click=removeAll();></i></div>
+          </div>
+         
+      <div style="margin-top: 70px;">
+       
+  
+        <div class=" box_grid" >  <Button style="width:100px ;margin-left: 5%;margin-top: 20px;" id="but" class="button button-balanced cartbutton payment {{class1}}" ng-click="payment()" const button = document.document.getElementById('but');
+          >PAYMENT</BUtton>   </div>
+  
+      </div>
+    </ion-list>
+  
+    </ion-content>
+  </ion-view>
+  <!-- //ng-disabled="button.disabled" -->

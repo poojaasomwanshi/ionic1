@@ -1,0 +1,40 @@
+<ion-view view-title="orders" cache-view="false">
+  <ion-header-bar  class=" bar-balanced" style="height: 27px;">
+    <ion-icon style="margin-right:1px ;margin-bottom: -1px;"  class="ion-chevron-left icon1"></ion-icon> <span style="margin-top: -2px;">  Orders </span>
+<button style="margin-top: -10px;margin-left: 85%;" class="button button-clear button-positive " ng-click="continue()">Home</button>
+  </ion-header-bar>
+
+  <ion-content >
+      <div  ng-repeat="product in PlacedOrders"  class=" card carddesign">
+
+        <div id="cards" class="item item-text-wrap  ">
+<span style="color: black;">          Date : {{product.date}}
+</span>          <hr>
+
+          <div class="row ">
+            <div class="col box_grids"> Order Id</div>
+            <div class="col box_grid box_grids col-50"> Title</div>
+            <div class="col box_grid box_grids">price</div>
+  
+          </div>
+          
+          <div class="row ">
+            <div class="col "> {{product.id}}</div>
+            <div class="col box_grid  col-50"> 
+              <span ng-repeat="item in product.items">{{item.names}}</span>
+            </div>
+            <div class="col box_grid  ">{{product.total}}</div>
+  
+          </div>
+          
+        </div>
+
+      </div>
+      
+  </ion-content >
+
+
+</ion-view>
+
+
+  

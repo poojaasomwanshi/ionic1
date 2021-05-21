@@ -1,0 +1,40 @@
+<ion-view  title="SignUp" hide-tabs style="background-color: lightyellow;">
+    <ion-content>
+        <div  class="list card" >
+
+          <form  ng-controller="AccountCtrl">
+          <div class="list">          
+            <span style="color: darkred;margin-left: 5px;"> {{warn}} </span>
+
+            <label class="item item-input item-stacked-label">
+              <span class="input-label ion-person"> Name</span>
+              <input type="text" placeholder="xyz" ng-model="username" ng-required="true">
+            </label>
+            <label class="item item-input item-stacked-label">
+              <span class="input-label ion-ios-telephone"> Mobile Number</span>
+              <input type="number" placeholder="9145364187" ng-model="phone" ng-required="true">
+            </label>
+            <label class="item item-input item-stacked-label">
+              <span class="input-label ion-email"> Email</span>
+              <input type="email" placeholder="xyz@aaa.com" ng-model="email" ng-required="true">
+            </label>
+            <label class="item item-input item-stacked-label">
+              <span class="input-label ion-eye-disabled"> Password</span>
+              <input type="password" placeholder="A$sdh2345#" ng-model="password" ng-required="true">
+            </label>
+           
+          </div>
+          <div style="color: darkred;"> {{msg}} </div>
+        
+          <input style="margin-top: 20px;" type="checkbox"> I agree with <a>terms and condition</a>
+            <a type="submit" on-tap="register(username,phone,email,password)" class="button button-block button-positive">Register</a>
+
+          <a  type="reset"  class="button button-block button-assertive" href="#/tab/login">
+            Clear
+          </a>
+          <div style="margin-bottom: 10px;"><span>already registered?..click here to </span><a href="#/tab/login">login</a></div>
+          </form>
+
+          </div>
+              </ion-content>
+</ion-view>

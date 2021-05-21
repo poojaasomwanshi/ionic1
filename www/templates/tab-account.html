@@ -1,0 +1,69 @@
+<ion-view view-title="Account">
+  <ion-header-bar  class=" bar-balanced" >
+<h5 style="color: white;">My Account</h5>
+  </ion-header-bar>
+
+    <ion-content>
+      <div class= href="#"> <a  style="color: red; margin-top: 5px;margin-left: 5px;" href="#/tab/login" onclick="style.display='none'">{{messages}}</a>
+        <p style="color: black solid;font-weight: bolder;margin-left: 10px;" > {{userName}}        </p>
+         <p style="margin-top: -12px;margin-left: 10px;">    {{mobileNumber}}        <p>
+
+         <p style="margin-top: -18px;margin-left: 10px;"> {{storedemail}}        </p>
+
+         </div>
+      <ion-list>    
+          <div style="margin-top: 10px;" class="list">
+         
+           
+            <a class="item item-icon-left item-icon-right" href="#/tab/edituser">
+              <i class="icon ion-person"></i>
+              My Account
+              <p style="margin-top: 2px !important;margin-right: 80px !important;" class="item-note">Edit Profile, Change Password
+              </p>
+              <i class="icon ion-chevron-right"></i>
+
+            </a>
+            <a class="item item-icon-left item-icon-right" href="#">
+              <i class="icon ion-heart"></i>
+            Favourites
+              <i class="icon ion-chevron-right"></i>
+            </a>
+          
+            <a class="item item-icon-left item-icon-right" href="#">
+              <i class="icon ion-card"></i>
+              Wallet
+              <i class="icon ion-chevron-right"></i>
+            </a>
+            <a class="item item-icon-left item-icon-right" href="#">
+              <i class="icon  ion-location"></i>
+            Store Locations
+              <i class="icon ion-chevron-right"></i>
+            </a>
+            <a class="item item-icon-left item-icon-right" href="#">
+              <i class="icon ion-alert-circled"></i>
+Notifications              <i class="icon ion-chevron-right"></i>
+            </a>
+            <a class="item item-icon-left item-icon-right" href="#">
+              <i class="icon ion-pricetags"></i>
+              Offers
+              <i class="icon ion-chevron-right"></i>
+            </a>
+            
+            <a class="item item-icon-left item-icon-right" href="#">
+              <i class="icon ion-person-add"></i>
+              About Us
+              <i class="icon ion-chevron-right"></i>
+
+            </a>
+            <a class="item item-icon-left item-icon-right" href="#" ng-click="logout()">
+              <i class="icon ion-log-out"></i>
+Logout              <i class="icon ion-chevron-right"></i>
+
+            </a>
+          </div>
+   
+     
+    </ion-list>
+    </ion-content>
+  </ion-view>
+  

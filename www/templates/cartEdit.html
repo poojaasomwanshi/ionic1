@@ -1,0 +1,38 @@
+<ion-view view-title="CartItems">
+    <ion-header-bar  class=" bar-balanced" style="height: 32px;" >
+      <ion-icon  class="ion-chevron-left icon1"></ion-icon>&nbsp;&nbsp; <a href="#/tab/categories"class="button button-clear  backButton">Back</a>
+  
+  
+    </ion-header-bar>
+    <ion-content >
+  
+  <ion-list class="" >
+  
+  
+  <div class="card cardcart1" style="background-color: cornsilk;">
+    <div class="row  box_grid1 carteditBox ">
+      <div class="col box_grid1 box_grids"> Name</div>
+      <div class="col box_grid1 box_grids">Quantity </div>
+    </div>
+    <div class="row box_grid1 carteditBox" ng-repeat="item in items">
+      <div class="col box_grid1">{{item.names}} </div>
+      <div class="col box_grid1"> <button ng-click="decreaseProduct(item.prodId,item.qnt)"; class=" button-positive editButton">-</button> &nbsp;&nbsp; {{item.qnt}}
+        <button ng-click="increaseProduct(item.prodId,item.qnt)"; class=" button-positive editButton1">+</button></div>
+  
+    </div>
+  
+  </div>
+  <Button  class="button button-balanced cartbutton" ng-click="backCart()">Submit</BUtton>   
+  
+  
+  
+  
+  </ion-list> 
+  
+  
+  
+        
+  
+    </ion-content>
+  </ion-view>
+  

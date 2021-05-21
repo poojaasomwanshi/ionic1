@@ -1,0 +1,58 @@
+<ion-view view-title="Home" >
+
+  <ion-header-bar ng-controller="DashCtrl" class=" bar-balanced" style="height: 35px;">
+     <a style="margin-top: -5px; font-size: 10px;margin-bottom: 5px;color:white;" class="btn">DELIVER TO </a><span style="margin-top: -5px;margin-right: 1px;">:</span> <span class=" ion-chevron-down  icon-right icon1"></span>
+     <button style="margin-top: -10px;"  ng-click="getPosition()"  class="btn btn1" >DELIVERY</button> 
+     <button style="margin-top: -10px;"   class="btn btn2" >PICKUP</button> 
+     <div style="margin-top:10px;margin-left: -85%;">{{location}} </div>
+
+  </ion-header-bar>
+
+  <ion-content ng-controller="DashCtrl">
+    <ion-slide-box class="slide-box" slide-interval="3000" auto-play='true' does-continue='true'>
+      <ion-slide ng-repeat="image in images">
+        <img ng-src="{{image.Photo}}" id="images">
+      </ion-slide>
+    </ion-slide-box>
+         <br>
+      <div>
+        <h3 >Categories  </h3>
+        <div class="row">
+          <div class="col box1"><a href="#/tab/categories"><img class="box " src="img/savor.jpeg " > <span>Savour Box</span></div></a>
+          <div class="col box5 "><a href="#/tab/categories"><img class="box" src="img/wrap.jpeg "><span>Signature Wrap</span></a>
+          </div>
+
+        </div>
+        <div class="row ">
+          <div class="col box1 "><a href="#/tab/categories"><img class="box" src="img/classic.jpeg  "><span>Classic Combo</span></div></a>
+          <div class="col box4"><a href="#/tab/categories"><img class="box" src=" img/fu.jpeg "><span>Fusion Combo</span></div></a>
+
+        </div>
+
+
+        <div class="row ">
+          <div class="col box1 "><a href="#/tab/categories"><img class="box" src=" img/sand.jpeg "><span>Sandwitches</span></a>
+          </div>
+          <div class="col box3 "><a href="#/tab/categories"><img class="box" src="img/salad.jpeg  "><span>Salads</span></a>
+          </div>
+
+        </div>
+        <div class="row ">
+          <div class="col box1"><a href="#/tab/categories"><img class="box" src=" img/cookie.jpeg "><span>Cookies & Chocoes</span></a>
+          </div>
+          <div class="col box2"><a href="#/tab/categories"><img class="box" src="img/drink.jpeg  "><span>Drinks</span></a>
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+
+  </ion-content>
+
+
+
+
+</ion-view>

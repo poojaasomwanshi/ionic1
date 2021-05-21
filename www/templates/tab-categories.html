@@ -1,0 +1,39 @@
+<ion-view view-title="Categories" cache-view="false" ng-controller="CategoryCtrl">
+  <ion-header-bar  class=" bar-balanced" style="height: 27px;" >
+    <a style="margin-right: 3px;" href="#/tab/dash"><ion-icon class="ion-chevron-left icon1"></ion-icon></a><span style="margin-right: 1px !important;display: inline !important;"> Savour</span><span>Box</span>
+
+    <a href="#/tab/cart"  ><i ng-click="cartLoad()" class="icon ion-ios-cart cart_icon item-button-right "  ></i></a>
+        
+  </ion-header-bar>
+  <ion-content style="margin-top: -30px;">
+    <ion-list style="margin-top:20px !important;">
+      <ion-item style="border: none !important;" ng-repeat="category in categories"  type="item-text-wrap">
+        <h2>{{category.names}}</h2>
+
+        <div id="cards" class="list card ">
+          <div class="card1">
+            <a href="#/tab/categories/{{category.id}}"> <img class=" cardimage" ng-src="{{category.face}}"></a>
+
+
+            <div style="white-space:nowrap;">
+              <img class="veg" style="align-content: left;" src="img/veg.png"><span class="spancard">{{category.names}}
+              </span><span>{{cartItems}}</span>
+
+            </div>
+          </div>
+          <br>
+          <hr>
+          <div class=" card2 "></div>
+          <p class="rupees"> &#x20B9 <span style="display: inline-block;">{{category.price}} </span>
+            <button class=" btndel" ng-click="del(category)"><i class="fa fa-minus">-</i></button><span class="orderSpan">{{category.qnt}}</span>
+        <button class=" btnadd" ng-click="add(category)"><i class="fa ion-ios-add fa-plus">+</i></button>
+        <button class=" btnaddcart" ng-click="addCart(category)">Add To Cart</button>
+          </P>
+
+        </div>
+
+
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
